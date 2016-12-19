@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - MastersMVC </title>
+    @Styles.Render("~/Content/bootstrap.css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">ΚΑΤΗΓΟΡΙΕΣ</li>
+                        <li>@Html.ActionLink("ΕΠΙΣΤΗΜΗ ΤΩΝ ΥΠΟΛΟΓΙΣΤΩΝ","Category/ΕΠΙΣΤΗΜΗ ΤΩΝ ΥΠΟΛΟΓΙΣΤΩΝ", "Courses")</li>
+                        <li>@Html.ActionLink("ΔΙΟΙΚΗΤΙΚΕΣ ΕΠΙΣΤΗΜΕΣ ΚΑΙ ΝΟΜΙΚΗ", "Category/ΔΙΟΙΚΗΤΙΚΕΣ ΕΠΙΣΤΗΜΕΣ ΚΑΙ ΝΟΜΙΚΗ", "Courses")</li>
+                        <li>@Html.ActionLink("ΘΕΤΙΚΕΣ ΕΠΙΣΤΗΜΕΣ", "Category/ΘΕΤΙΚΕΣ ΕΠΙΣΤΗΜΕΣ", "Courses")</li>
+                        <li>@Html.ActionLink("ΠΑΙΔΑΓΩΓΙΚΑ", "Category/ΠΑΙΔΑΓΩΓΙΚΑ", "Courses")</li>
+                        <li>@Html.ActionLink("ΚΟΙΝΩΝΙΚΕΣ ΚΑΙ ΑΝΘΡΩΠΙΣΤΗΚΕΣ ΕΠΙΣΤΗΜΕΣ", "Category/ΚΟΙΝΩΝΙΚΕΣ ΚΑΙ ΑΝΘΡΩΠΙΣΤΗΚΕΣ ΕΠΙΣΤΗΜΕΣ", "Courses")</li>
+                        <li>@Html.ActionLink("ΟΙΚΟΝΟΜΙΚΕΣ ΕΠΙΣΤΗΜΕΣ ΚΑΙ ΣΤΑΤΙΣΤΙΚΗ", "Category/ΟΙΚΟΝΟΜΙΚΕΣ ΕΠΙΣΤΗΜΕΣ ΚΑΙ ΣΤΑΤΙΣΤΙΚΗ", "Courses")</li>
+                        <li>@Html.ActionLink("ΕΠΙΣΤΗΜΕΣ ΥΓΕΙΑΣ", "Category/ΕΠΙΣΤΗΜΕΣ ΥΓΕΙΑΣ", "Courses")</li>
+                        <li class="nav-header">ΠΑΝΕΠΙΣΤΉΜΙΑΚΑ ΙΔΡΥΜΑΤΑ</li>
+                        <li>@Html.ActionLink("Πανεπιστήμιο Αθηνών","University/2", "Courses")</li>
+                        <li>@Html.ActionLink("Εθνικό Μετσόβιο Πολυτεχνείο", "University/3", "Courses")</li>
+                        <li>@Html.ActionLink("Πανεπιστήμιο Μακεδονίας", "University/4", "Courses")</li>
+                        <li>@Html.ActionLink("Αριστοτέλειο Πανεπιστήμιο", "University/5", "Courses")</li>
+                        <li>@Html.ActionLink("Πανεπιστήμιο Ιωαννίνων", "University/6", "Courses")</li>
+                        <li>@Html.ActionLink("Πανεπιστήμιο Πειραιώς", "University/1", "Courses")</li>
+                        <li>@Html.ActionLink("Πάντειο Πανεπιστήμιο", "University/7", "Courses")</li>
+                        <li>@Html.ActionLink("Πανεπιστήμιο Πατρών", "University/8", "Courses")</li>
+                        <li>@Html.ActionLink("Πανεπιστήμιο Κρήτης", "University/9", "Courses")</li>
+                        <li>@Html.ActionLink("Πολυτεχνείο Κρήτης", "University/10", "Courses")</li>
+                        <li>@Html.ActionLink("Πανεπιστήμιο Αγαίου", "University/11", "Courses")</li>
+                        <li>@Html.ActionLink("Πανεπιστήμιο Θεσσαλίας", "University/14", "Courses")</li>
+                        <li>@Html.ActionLink("Πανεπιστήμιο Πελοπονήσσου", "University/12", "Courses")</li>
+                        <li>@Html.ActionLink("Δημοκρίτειο Πανεπιστήμιο", "University/13", "Courses")</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span9">
+                @RenderSection("featured", required: false)
+                <div class="row-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrapjs")
+</body>
+</html>
